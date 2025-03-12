@@ -209,6 +209,7 @@ span.highlight {
     text-align: left;
     position: relative;
   }
+  /*
   .timelineitem:nth-child(odd)::after {
     content: "";
     position: absolute;
@@ -219,7 +220,7 @@ span.highlight {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-right: 8px solid #333; /* 向右的箭頭 */
-  }
+  }*/
   .timelineitem:nth-child(even) {
     margin-right: 50%;
     margin-left: 0px;
@@ -227,6 +228,7 @@ span.highlight {
     text-align: right;
     position: relative;
   }
+/*
   .timelineitem:nth-child(even)::after {
     content: "";
     position: absolute;
@@ -237,7 +239,7 @@ span.highlight {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 8px solid #333; /* 向左的箭頭 */
-  }
+  }*/
   .timelineitem {
     width: 45.5%;
     position: relative;
