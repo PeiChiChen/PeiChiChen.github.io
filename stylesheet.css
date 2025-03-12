@@ -207,12 +207,36 @@ span.highlight {
     margin-left: 50%;
     border-left: 5px solid #333;
     text-align: left;
+    position: relative;
+  }
+  .timelineitem:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    width: 0; 
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #333; /* 向右的箭頭 */
   }
   .timelineitem:nth-child(even) {
     margin-right: 50%;
     margin-left: 0px;
     border-right: 5px solid #333;
     text-align: right;
+    position: relative;
+  }
+  .timelineitem:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #333; /* 向左的箭頭 */
   }
   .timelineitem {
     width: 45.5%;
