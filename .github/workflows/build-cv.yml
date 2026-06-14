@@ -1,0 +1,33 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - 'cv/**'
+      - '.github/workflows/build-cv.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV.tex
+          working_directory: cv
+
+      - name: Move PDF to root
+        run: cp cv/CV.pdf CV.pdf
+
+      - name: Commit updated PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update CV.pdf
+          file_pattern: CV.pdf
